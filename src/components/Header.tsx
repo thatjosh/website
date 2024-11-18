@@ -1,14 +1,15 @@
 import Glitch from "./Glitch";
-import { TabOption } from "../interface/interface";
+import { TabOption } from "../interface/Interface";
 import DarkModeButton from "./DarkModeButton";
 import FadeInFromBottom from "./FadeIn";
 
 interface HeaderProps {
+  tab: TabOption;
   setTab: React.Dispatch<React.SetStateAction<TabOption>>;
 }
-const Header: React.FC<HeaderProps> = ({ setTab }) => {
+const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
   return (
-    <div className="flex min-w-[600px] p-12">
+    <div className="flex min-w-[600px] p-8">
       <div className="text-left ml-28">
         <h1 className="text-5xl font-serif">
           <Glitch content={"Joshua Ang"} revealSpeed={100} glitchTime={0} />
@@ -23,7 +24,11 @@ const Header: React.FC<HeaderProps> = ({ setTab }) => {
         <FadeInFromBottom delay={100}>
           <div className="flex gap-4 mt-4">
             <button
-              className="text-sm px-4 py-2 bg-black text-white rounded"
+              className={`text-sm px-4 py-2 ${
+                tab === TabOption.WorkExperience
+                  ? "bg-black text-white"
+                  : "bg-gray-100 text-black"
+              }`}
               onClick={() => setTab(TabOption.WorkExperience)}
             >
               <Glitch
@@ -33,13 +38,17 @@ const Header: React.FC<HeaderProps> = ({ setTab }) => {
               />
             </button>
             <button
-              className="text-sm px-4 py-2 bg-gray-200 rounded"
+              className={`text-sm px-4 py-2 ${
+                tab === TabOption.Projects
+                  ? "bg-black text-white"
+                  : "bg-gray-100 text-black"
+              }`}
               onClick={() => setTab(TabOption.Projects)}
             >
               <Glitch content={"Projects"} revealSpeed={150} glitchTime={500} />
             </button>
           </div>
-          <div className="mt-4">
+          <div className="mt-8">
             <DarkModeButton />
           </div>
         </FadeInFromBottom>
