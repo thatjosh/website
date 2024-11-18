@@ -1,4 +1,4 @@
-import { Project, WorkExperience } from "./Interface";
+import { Project, WorkExperience } from "./interface";
 import GuruLab from "../assets/gurulab.svg?react";
 import Google from "../assets/google.svg?react";
 import Amazon from "../assets/amazon.svg?react";

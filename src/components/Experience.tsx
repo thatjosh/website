@@ -6,7 +6,7 @@ import {
   DELAY_FOR_CONTENT_SECTION,
   ON_LOAD_DELAY_FOR_CONTENT_SECTION,
   WORK_EXPERIENCE_CONTENT,
-} from "../interface/Constants";
+} from "../content/constants";
 import { useDarkMode } from "../context/DarkModeContext";
 
 const Experience: React.FC = () => {

@@ -1,5 +1,5 @@
 import Glitch from "./Glitch";
-import { TabOption } from "../interface/Interface";
+import { TabOption } from "../content/interface";
 import DarkModeButton from "./DarkModeButton";
 import FadeInFromBottom from "./FadeIn";
 

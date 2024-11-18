@@ -2,7 +2,7 @@ import Glitch from "./Glitch";
 import {
   DELAY_FOR_CONTENT_SECTION,
   PROJECT_CONTENT,
-} from "../interface/Constants";
+} from "../content/constants";
 import FadeInFromBottom from "./FadeIn";
 
 const Project: React.FC = () => {
