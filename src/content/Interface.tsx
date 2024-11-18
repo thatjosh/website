@@ -24,6 +24,7 @@ export interface WorkExperience {
 }
 
 export interface Project {
+  date: string;
   title: string;
   description: string;
   tags: string[];

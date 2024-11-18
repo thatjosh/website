@@ -19,6 +19,7 @@ const Project: React.FC = () => {
               <div className="h-4 w-4 bg-gray-200 rounded-full" />
             </div>
             <div className="max-w-fit sm:max-w-lg">
+              <p className="text-sm text-gray-500">{item.date}</p>
               <h2 className="text-2xl font-serif">
                 <Glitch
                   content={`${item.title}`}

@@ -42,10 +42,19 @@ export const DELAY_FOR_CONTENT_SECTION = 500;
 
 export const PROJECT_CONTENT: Project[] = [
   {
+    date: "SEP 2022",
     title: "Geolocation Security Web Client",
     description:
       "Hacked together a geolocation tracking frontend to manage security issues on a city-wide level over a weekend.",
     link: "https://geolocation-security-web-client.netlify.app",
     tags: ["React", "Typescript", "Google Maps API"],
+  },
+  {
+    date: "AUG 2022",
+    title: "Ecotect – Social Enterprise Landing Page",
+    description:
+      "Built an ecommerce site (home, store & product pages) with responsive UI in 2 weeks.",
+    link: "https://ecotect-web-client-archive.netlify.app/",
+    tags: ["React", "Typescript"],
   },
 ];
