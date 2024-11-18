@@ -29,4 +29,10 @@ export interface Project {
   description: string;
   tags: string[];
   link?: string;
+  attachments?: Attachments[];
+}
+
+export interface Attachments {
+  link: string;
+  title: string;
 }

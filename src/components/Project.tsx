@@ -31,7 +31,7 @@ const Project: React.FC = () => {
               <div className="flex flex-row flex-wrap">
                 <p className="text-md italic text-gray-600">
                   <Glitch
-                    content={item.tags.join(" | ")}
+                    content={item.tags.join(" · ")}
                     revealSpeed={RevealSpeed.Moderate}
                     glitchTime={DELAY_FOR_CONTENT_SECTION}
                   />
@@ -46,20 +46,42 @@ const Project: React.FC = () => {
                 />
               </p>
 
-              <div>
-                <button
-                  className="hover:scale-105 duration-300 mt-2"
-                  onClick={() => window.open(item.link)}
-                >
-                  <div className="font-serif text-black ">
-                    <Glitch
-                      content={"Explore"}
-                      revealSpeed={RevealSpeed.Slow}
-                      glitchTime={DELAY_FOR_CONTENT_SECTION}
-                    />
-                    <div className="max-w-lg bg-black h-[1px]"></div>
-                  </div>
-                </button>
+              {item.link && (
+                <div>
+                  <button
+                    className="hover:scale-105 duration-300 mt-2"
+                    onClick={() => window.open(item.link)}
+                  >
+                    <div className="font-serif text-black ">
+                      <Glitch
+                        content={"Explore"}
+                        revealSpeed={RevealSpeed.Slow}
+                        glitchTime={DELAY_FOR_CONTENT_SECTION}
+                      />
+                      <div className="max-w-lg bg-black h-[1px]"></div>
+                    </div>
+                  </button>
+                </div>
+              )}
+              <div className="flex flex-row gap-2">
+                {item.attachments &&
+                  item.attachments.map((a, index) => (
+                    <div key={index}>
+                      <button
+                        className="hover:scale-105 duration-300 mt-2"
+                        onClick={() => window.open(a.link)}
+                      >
+                        <div className="font-serif text-black ">
+                          <Glitch
+                            content={a.title}
+                            revealSpeed={RevealSpeed.Slow}
+                            glitchTime={DELAY_FOR_CONTENT_SECTION}
+                          />
+                          <div className="max-w-lg bg-black h-[1px]"></div>
+                        </div>
+                      </button>
+                    </div>
+                  ))}
               </div>
             </div>
           </FadeInFromBottom>

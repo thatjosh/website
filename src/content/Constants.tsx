@@ -21,7 +21,7 @@ export const WORK_EXPERIENCE_CONTENT: WorkExperience[] = [
     location: "Warsaw, Poland",
     date: "JUN - SEP 2023",
     description:
-      "Built an automation tool, which includes a dashboard, data pipelines and Python scripts that modifies integration test configurations based on memory utilization.",
+      "Built an automation tool, which includes a dashboard, data pipelines and Python scripts that modifies integration test configurations based on memory utilisation.",
     icon: <Google className="h-12 w-12" />,
   },
   {
@@ -42,6 +42,23 @@ export const DELAY_FOR_CONTENT_SECTION = 500;
 
 export const PROJECT_CONTENT: Project[] = [
   {
+    date: "JUN 2024",
+    title: "Logistics Regression Coursework",
+    description:
+      "Fitted a logistic regression model to identify and interpret significant relationships between various predictor variables and the outcome variable. This submission was awarded highest mark in the cohort. (Mark: 93)",
+    attachments: [
+      {
+        title: "Report",
+        link: "https://github.com/thatjosh/st211-individual-project/blob/main/22757_ST211_individual.pdf",
+      },
+      {
+        title: "Code",
+        link: "https://github.com/thatjosh/st211-individual-project/tree/main",
+      },
+    ],
+    tags: ["Logistic Regression", "Machine Learning", "Statistics"],
+  },
+  {
     date: "SEP 2022",
     title: "Geolocation Security Web Client",
     description:
@@ -53,7 +70,7 @@ export const PROJECT_CONTENT: Project[] = [
     date: "AUG 2022",
     title: "Ecotect – Social Enterprise Landing Page",
     description:
-      "Built an ecommerce site (home, store & product pages) with responsive UI in 2 weeks.",
+      "Built an ecommerce site (home, store & product pages) with responsive UI for a social enterprise in 2 weeks.",
     link: "https://ecotect-web-client-archive.netlify.app/",
     tags: ["React", "Typescript"],
   },
