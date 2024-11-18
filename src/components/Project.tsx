@@ -1,6 +1,7 @@
 import Glitch from "./Glitch";
 import {
   DELAY_FOR_CONTENT_SECTION,
+  DELAY_PER_ITEM,
   PROJECT_CONTENT,
 } from "../content/Constants";
 import FadeInFromBottom from "./FadeIn";
@@ -12,7 +13,7 @@ const Project: React.FC = () => {
       {PROJECT_CONTENT.map((item, index) => (
         <div key={index} className="flex flex-row">
           <FadeInFromBottom
-            delay={DELAY_FOR_CONTENT_SECTION + index * 800}
+            delay={DELAY_FOR_CONTENT_SECTION + index * DELAY_PER_ITEM}
             duration={DELAY_FOR_CONTENT_SECTION}
           >
             <div className="mt-4 h-4 w-4 absolute -ml-8 lg:-ml-16 mb-1">
@@ -54,8 +55,8 @@ const Project: React.FC = () => {
                   >
                     <div className="font-serif text-black ">
                       <Glitch
-                        content={"Explore"}
-                        revealSpeed={RevealSpeed.Slow}
+                        content={"Visit Site"}
+                        revealSpeed={RevealSpeed.Moderate}
                         glitchTime={DELAY_FOR_CONTENT_SECTION}
                       />
                       <div className="max-w-lg bg-black h-[1px]"></div>

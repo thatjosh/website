@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { InitStateContext } from "../context/Initialiser";
 import {
   DELAY_FOR_CONTENT_SECTION,
+  DELAY_PER_ITEM,
   ON_LOAD_DELAY_FOR_CONTENT_SECTION,
   WORK_EXPERIENCE_CONTENT,
 } from "../content/Constants";
@@ -35,7 +36,7 @@ const Experience: React.FC = () => {
           onMouseLeave={() => setFocusElement(null)}
         >
           <FadeInFromBottom
-            delay={glitchTime + index * 800}
+            delay={glitchTime + index * DELAY_PER_ITEM}
             duration={glitchTime}
           >
             {!darkMode && (
