@@ -15,7 +15,7 @@ const Project: React.FC = () => {
             delay={DELAY_FOR_CONTENT_SECTION + index * 800}
             duration={DELAY_FOR_CONTENT_SECTION}
           >
-            <div className="mt-4 h-4 w-4 absolute -ml-8 lg:-ml-16">
+            <div className="mt-4 h-4 w-4 absolute -ml-8 lg:-ml-16 mb-1">
               <div className="h-4 w-4 bg-gray-200 rounded-full" />
             </div>
             <div className="max-w-fit sm:max-w-lg">
@@ -38,7 +38,7 @@ const Project: React.FC = () => {
                 </p>
               </div>
 
-              <p className="text-md text-gray-700">
+              <p className="text-md text-gray-700 mt-2">
                 <Glitch
                   content={item.description}
                   revealSpeed={RevealSpeed.VeryFast}
