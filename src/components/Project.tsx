@@ -4,6 +4,7 @@ import {
   PROJECT_CONTENT,
 } from "../content/Constants";
 import FadeInFromBottom from "./FadeIn";
+import { RevealSpeed } from "../content/Interface";
 
 const Project: React.FC = () => {
   return (
@@ -14,14 +15,14 @@ const Project: React.FC = () => {
             delay={DELAY_FOR_CONTENT_SECTION + index * 800}
             duration={DELAY_FOR_CONTENT_SECTION}
           >
-            <div className="mt-4 h-4 w-4 absolute -ml-16">
+            <div className="mt-4 h-4 w-4 absolute -ml-8 lg:-ml-16">
               <div className="h-4 w-4 bg-gray-200 rounded-full" />
             </div>
-            <div className="max-w-sm lg:max-w-lg">
+            <div className="max-w-fit sm:max-w-lg">
               <h2 className="text-2xl font-serif">
                 <Glitch
                   content={`${item.title}`}
-                  revealSpeed={50}
+                  revealSpeed={RevealSpeed.Moderate}
                   glitchTime={DELAY_FOR_CONTENT_SECTION}
                 />
               </h2>
@@ -30,7 +31,7 @@ const Project: React.FC = () => {
                 <p className="text-md italic text-gray-600">
                   <Glitch
                     content={item.tags.join(" | ")}
-                    revealSpeed={50}
+                    revealSpeed={RevealSpeed.Moderate}
                     glitchTime={DELAY_FOR_CONTENT_SECTION}
                   />
                 </p>
@@ -39,7 +40,7 @@ const Project: React.FC = () => {
               <p className="text-md text-gray-700">
                 <Glitch
                   content={item.description}
-                  revealSpeed={5}
+                  revealSpeed={RevealSpeed.VeryFast}
                   glitchTime={DELAY_FOR_CONTENT_SECTION}
                 />
               </p>
@@ -52,7 +53,7 @@ const Project: React.FC = () => {
                   <div className="font-serif text-black ">
                     <Glitch
                       content={"Explore"}
-                      revealSpeed={150}
+                      revealSpeed={RevealSpeed.Slow}
                       glitchTime={DELAY_FOR_CONTENT_SECTION}
                     />
                     <div className="max-w-lg bg-black h-[1px]"></div>

@@ -36,7 +36,7 @@ export const WORK_EXPERIENCE_CONTENT: WorkExperience[] = [
   },
 ];
 
-export const ON_LOAD_DELAY_FOR_CONTENT_SECTION = 2000;
+export const ON_LOAD_DELAY_FOR_CONTENT_SECTION = 1800;
 
 export const DELAY_FOR_CONTENT_SECTION = 500;
 

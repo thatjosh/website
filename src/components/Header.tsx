@@ -1,5 +1,5 @@
 import Glitch from "./Glitch";
-import { TabOption } from "../content/Interface";
+import { RevealSpeed, TabOption } from "../content/Interface";
 import DarkModeButton from "./DarkModeButton";
 import FadeInFromBottom from "./FadeIn";
 
@@ -9,20 +9,20 @@ interface HeaderProps {
 }
 const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
   return (
-    <div className="flex min-w-[600px] p-8">
-      <div className="text-left ml-28">
+    <div className="flex sm:min-w-[500px] p-8">
+      <div className="text-left">
         <h1 className="text-5xl font-serif">
           <Glitch content={"Joshua Ang"} revealSpeed={100} glitchTime={0} />
         </h1>
         <p className="text-black mt-2">
           <Glitch
             content={"Fullstack · Machine Learning · Statistics"}
-            revealSpeed={20}
+            revealSpeed={RevealSpeed.Fast}
             glitchTime={1000}
           />
         </p>
         <FadeInFromBottom delay={100}>
-          <div className="flex gap-4 mt-4">
+          <div className="flex flex-wrap gap-4 mt-4">
             <button
               className={`text-sm px-4 py-2 ${
                 tab === TabOption.WorkExperience
@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
             >
               <Glitch
                 content={"Work Experience"}
-                revealSpeed={50}
+                revealSpeed={RevealSpeed.Moderate}
                 glitchTime={500}
               />
             </button>
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
               <Glitch content={"Projects"} revealSpeed={150} glitchTime={500} />
             </button>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 hidden lg:visible">
             <DarkModeButton />
           </div>
         </FadeInFromBottom>

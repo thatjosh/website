@@ -11,10 +11,10 @@ const App: React.FC = () => {
   const { darkMode } = useDarkMode();
 
   return (
-    <div className="flex flex-wrap items-center justify-center h-screen bg-white">
-      <div className="flex flex-wrap items-center justify-center bg-white">
+    <div className="flex sm:flex-wrap sm:items-center sm:justify-center h-screen bg-white overflow-auto">
+      <div className="sm:flex sm:flex-wrap sm:items-center sm:justify-center bg-white">
         <Header tab={tab} setTab={setTab} />
-        <div className="flex gap-[55px] px-8 pb-8">
+        <div className="flex gap-[22.5px] lg:gap-[55px] px-8 pb-8">
           {darkMode && <DarkModeOverlay />}
           <div className="mt-8 w-0.5 bg-gray-200" />
           <div className="flex flex-row">
