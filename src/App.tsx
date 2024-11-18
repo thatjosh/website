@@ -5,6 +5,7 @@ import DarkModeOverlay from "./components/DarkModeOverlay";
 import Experience from "./components/Experience";
 import Project from "./components/Project";
 import { TabOption } from "./content/Interface";
+import DarkModeButton from "./components/DarkModeButton";
 
 const App: React.FC = () => {
   const [tab, setTab] = useState<TabOption>(TabOption.WorkExperience);

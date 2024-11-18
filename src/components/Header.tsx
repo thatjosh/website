@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
         <h1 className="text-5xl font-serif">
           <Glitch content={"Joshua Ang"} revealSpeed={100} glitchTime={0} />
         </h1>
-        <p className="text-black mt-2">
+        <p className="text-black mt-2 text-nowrap">
           <Glitch
             content={"Fullstack · Machine Learning · Statistics"}
             revealSpeed={RevealSpeed.Fast}
@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
         <FadeInFromBottom delay={100}>
           <div className="flex flex-wrap gap-4 mt-4">
             <button
-              className={`text-sm px-4 py-2 ${
+              className={`text-sm px-4 py-2 lg:w-40 ${
                 tab === TabOption.WorkExperience
                   ? "bg-black text-white"
                   : "bg-gray-100 text-black"
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
               />
             </button>
             <button
-              className={`text-sm px-4 py-2 ${
+              className={`text-sm px-4 py-2 lg:w-40 ${
                 tab === TabOption.Projects
                   ? "bg-black text-white"
                   : "bg-gray-100 text-black"
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
               <Glitch content={"Projects"} revealSpeed={150} glitchTime={500} />
             </button>
           </div>
-          <div className="mt-8 hidden lg:visible">
+          <div className={`mt-4 lg:mt-4`}>
             <DarkModeButton />
           </div>
         </FadeInFromBottom>
