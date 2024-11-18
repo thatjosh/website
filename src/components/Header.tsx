@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
   return (
-    <div className="flex sm:min-w-[500px] p-8">
+    <div className="flex sm:min-w-[620px] p-8">
       <div className="text-left">
         <h1 className="text-5xl font-serif">
           <Glitch content={"Joshua Ang"} revealSpeed={100} glitchTime={0} />
