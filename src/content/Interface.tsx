@@ -2,15 +2,16 @@ import { ReactNode } from "react";
 
 // Different reveal speed for different text lengths
 export enum RevealSpeed {
-  VeryFast = 5, // Paragraphs
-  Fast = 20, // Short descriptions
-  Moderate = 50, // Title
-  Slow = 150, // Emphasis
+  VeryFast = 5, // For paragraphs
+  Fast = 20, // For short descriptions
+  Moderate = 50, // For heading or Subheading
+  ModeratelySlow = 100,
+  Slow = 150, // For Emphasis
 }
 
 export enum TabOption {
-  WorkExperience,
-  Projects,
+  WorkExperience = "workExperience",
+  Projects = "projects",
 }
 
 export interface WorkExperience {

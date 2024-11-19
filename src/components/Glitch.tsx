@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { RevealSpeed } from "../content/Interface";
 
 const getRandomBit = () => Math.floor(Math.random() * 2);
 
@@ -25,11 +26,9 @@ const getNextCharacterReveal = (
   return getRandomBit().toString();
 };
 
-// revealSpeed: 50 (ms) -> standard (for titles), 20 (ms) -> fast, 5 (ms) -> very fast (for paragraphs)
-
 const Glitch: React.FC<{
   content: string;
-  revealSpeed: number;
+  revealSpeed: RevealSpeed;
   glitchTime: number;
 }> = ({ content, revealSpeed, glitchTime }) => {
   const DEFAULT_VAL = getStringAsBit(content);

@@ -36,6 +36,14 @@ export const WORK_EXPERIENCE_CONTENT: WorkExperience[] = [
   },
 ];
 
+export const TITLE_GLITCH_TIME = 0;
+
+export const HEADER_FADE_TIME = 100;
+
+export const HEADER_SUBHEADING_GLITCH_TIME = 500;
+
+export const HEADER_TEXT_GLITCH_TIME = 1000;
+
 export const ON_LOAD_DELAY_FOR_CONTENT_SECTION = 2000;
 
 export const DELAY_FOR_CONTENT_SECTION = 800;
@@ -64,7 +72,7 @@ export const PROJECT_CONTENT: Project[] = [
     date: "SEP 2022",
     title: "Geolocation Security Web Client",
     description:
-      "Hacked together a geolocation tracking frontend to manage security issues on a city-wide level over a weekend for a hackathon.",
+      "Prototyped a geolocation tracking frontend to manage security issues for a city over a weekend for a hackathon.",
     link: "https://geolocation-security-web-client.netlify.app",
     tags: ["React", "Typescript", "Google Maps API"],
   },
