@@ -11,9 +11,9 @@ import {
 
 interface HeaderProps {
   tab: TabOption;
-  toggleTab: (tab: TabOption) => void;
+  setTab: React.Dispatch<React.SetStateAction<TabOption>>;
 }
-const Header: React.FC<HeaderProps> = ({ tab, toggleTab }) => {
+const Header: React.FC<HeaderProps> = ({ tab, setTab }) => {
   return (
     <div className="flex sm:min-w-[620px] p-8">
       <div className="text-left">
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ tab, toggleTab }) => {
                   ? "bg-black text-white"
                   : "bg-gray-100 text-black"
               }`}
-              onClick={() => toggleTab(TabOption.WorkExperience)}
+              onClick={() => setTab(TabOption.WorkExperience)}
             >
               <Glitch
                 content={"Experience"}
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ tab, toggleTab }) => {
                   ? "bg-black text-white"
                   : "bg-gray-100 text-black"
               }`}
-              onClick={() => toggleTab(TabOption.Projects)}
+              onClick={() => setTab(TabOption.Projects)}
             >
               <Glitch
                 content={"Projects"}

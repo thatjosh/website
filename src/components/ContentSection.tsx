@@ -4,21 +4,14 @@ import Project from "./Project";
 
 interface ContentSectionProps {
   tab: TabOption;
-  hasMounted: Record<TabOption, boolean>;
 }
 
-const ContentSection: React.FC<ContentSectionProps> = ({ tab, hasMounted }) => {
+const ContentSection: React.FC<ContentSectionProps> = ({ tab }) => {
   return (
     <div className="flex gap-[22.5px] lg:gap-[55px] px-8">
       <div className="mt-8 w-0.5 bg-gray-200" />
-      <div className={tab === TabOption.WorkExperience ? "block" : "hidden"}>
-        <Experience />
-      </div>
-      {hasMounted.projects && (
-        <div className={tab === TabOption.Projects ? "block" : "hidden"}>
-          <Project />
-        </div>
-      )}
+      {tab === TabOption.WorkExperience && <Experience />}
+      {tab === TabOption.Projects && <Project />}
     </div>
   );
 };
