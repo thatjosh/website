@@ -46,7 +46,7 @@ export const HEADER_TEXT_GLITCH_TIME = 1000;
 
 export const ON_LOAD_DELAY_FOR_CONTENT_SECTION = 2000;
 
-export const DELAY_FOR_CONTENT_SECTION = 800;
+export const DELAY_FOR_CONTENT_SECTION = 400;
 
 export const DELAY_PER_ITEM = 400; // used for each item in the content section
 
