@@ -9,16 +9,17 @@ import { RevealSpeed } from "../content/Interface";
 
 const Project: React.FC = () => {
   return (
-    <div className="space-y-12">
+    <div className="space-y-8">
       {PROJECT_CONTENT.map((item, index) => (
         <div key={index} className="flex flex-row">
           <FadeInFromBottom
             delay={DELAY_FOR_CONTENT_SECTION + index * DELAY_PER_ITEM}
             duration={DELAY_FOR_CONTENT_SECTION}
           >
-            <div className="mt-4 h-4 w-4 absolute -ml-8 lg:-ml-16 mb-1">
+            <div className="mt-4 h-4 w-4 absolute -ml-8 lg:-ml-16">
               <div className="h-4 w-4 bg-gray-200 rounded-full" />
             </div>
+
             <div className="max-w-fit sm:max-w-lg">
               <p className="text-sm text-gray-500">{item.date}</p>
               <h2 className="text-2xl font-serif">
@@ -50,7 +51,7 @@ const Project: React.FC = () => {
               {item.link && (
                 <div>
                   <button
-                    className="hover:scale-105 duration-300 mt-2"
+                    className="hover:scale-105 duration-300 mt-1"
                     onClick={() => window.open(item.link)}
                   >
                     <div className="font-serif text-black ">
